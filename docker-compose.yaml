@@ -1,0 +1,43 @@
+version: '2.1'
+services :
+ service-one:
+  image: jattdjsingh/service-one:latest
+  networks:
+    my-network:
+      ipv4_address: 10.0.0.11
+  ports :
+   - "8081:8081"
+  restart: on-failure
+ service-two:
+  image: jattdjsingh/service-two:latest
+  networks:
+    my-network:
+      ipv4_address: 10.0.0.12
+  ports:
+   - "8082:8082"
+  restart: on-failure
+ service-three:
+  image: jattdjsingh/service-three:latest
+  restart: on-failure
+  networks:
+    my-network:
+      ipv4_address: 10.0.0.13
+  ports:
+   - "8083:8083"
+ service-four:
+  image: jattdjsingh/service-four:latest
+  restart: on-failure
+  networks:
+    my-network:
+      ipv4_address: 10.0.0.14
+  ports:
+    - "8084:8084"
+networks:
+  my-network:
+    driver: bridge
+    enable_ipv6: false
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1

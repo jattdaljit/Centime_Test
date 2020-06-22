@@ -1,0 +1,15 @@
+insert into user (id, parent_id, name, color) values (1,0, 'warrior', 'red');
+insert into user (id, parent_id, name, color) values (2,0, 'wizard', 'green');
+insert into user (id, parent_id, name, color) values (3,0, 'priest', 'white');
+insert into user (id, parent_id, name, color) values (4,0, 'rogue', 'yellow');
+insert into user (id, parent_id, name, color) values (5,1, 'fighter', 'blue');
+insert into user (id, parent_id, name, color) values (6,1, 'paladin', 'lightblue');
+insert into user (id, parent_id, name, color) values (7,1, 'ranger', 'lightgreen');
+insert into user (id, parent_id, name, color) values (8,2, 'mage', 'grey');
+insert into user (id, parent_id, name, color) values (9,2, 'Specialist wizard', 'lightgrey');
+insert into user (id, parent_id, name, color) values (10,3, 'cleric', 'red');
+insert into user (id, parent_id, name, color) values (11,3, 'druid', 'green');
+insert into user (id, parent_id, name, color) values (12,3, 'priest of specific myths', 'white');
+insert into user (id, parent_id, name, color) values (13,4, 'thief', 'yellow');
+insert into user (id, parent_id, name, color) values (14,4, 'bard', 'blue');
+insert into user (id, parent_id, name, color) values (15,13, 'assassin', 'lightblue');
